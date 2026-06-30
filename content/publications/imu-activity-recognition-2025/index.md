@@ -24,5 +24,5 @@ projects: []
 slides: ""
 links:
   - type: pdf
-    url: "/uploads/imu-activity-recognition-2025.pdf"
+    url: "/uploads/haptic-feedback-gait-2025.pdf"
 ---

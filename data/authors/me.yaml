@@ -41,24 +41,21 @@ interests:
 
 education:
   - degree: PhD in Mechanical Engineering
-    institution: University of Maine
-    location: 'Orono, ME, USA'
+    institution: 'University of Maine, Orono, ME, USA'
     year: 'Sep 2023 – Present'
     start: 'Sep 2023'
     end: 'Present'
     summary: |
       Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. Thesis: Smart Real-time Gait Rehabilitation System.
   - degree: M.Sc. in Mechanical Engineering
-    institution: Amirkabir University of Technology
-    location: 'Tehran, Iran'
+    institution: 'Amirkabir University of Technology, Tehran, Iran'
     year: 'Sep 2017 – Feb 2020'
     start: 'Sep 2017'
     end: 'Feb 2020'
     summary: |
       Robotics and Control Systems (Tehran Polytechnic). Thesis: Trajectory optimization of a robot arm in the joint and Cartesian spaces.
   - degree: B.Sc. in Mechanical Engineering
-    institution: University of Tehran
-    location: 'Tehran, Iran'
+    institution: 'University of Tehran, Tehran, Iran'
     year: 'Sep 2012 – Jul 2017'
     start: 'Sep 2012'
     end: 'Jul 2017'

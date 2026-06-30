@@ -26,4 +26,8 @@ slides: ""
 links:
   - type: pdf
     url: "/uploads/spot-welding-trajectory-2023.pdf"
+  - name: DOI
+    url: "https://www.researchgate.net/profile/Ehsan-Sharafian-Moghaddam/publication/370684960_TRAJECTORY_OPTIMIZATION_OF_A_SPOT-WELDING_ROBOT_IN_THE_JOINT_AND_CARTESIAN_SPACES/links/68e90943ffdca73694b6c528/TRAJECTORY-OPTIMIZATION-OF-A-SPOT-WELDING-ROBOT-IN-THE-JOINT-AND-CARTESIAN-SPACES.pdf"
+
+    
 ---

@@ -1,0 +1,56 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      try { document.execCommand('copy'); resolve(); }
+      catch (e) { reject(e); }
+      document.body.removeChild(ta);
+    });
+  }
+
+  function showToast(msg, x, y) {
+    var toast = document.createElement('div');
+    toast.textContent = msg;
+    toast.style.cssText =
+      'position:fixed;left:' + x + 'px;top:' + (y - 60) + 'px;' +
+      'transform:translateX(-50%);' +
+      'background:#111;color:#fff;padding:6px 12px;border-radius:8px;' +
+      'font-size:13px;font-weight:600;z-index:9999;opacity:0;pointer-events:none;' +
+      'white-space:nowrap;transition:opacity .2s ease;box-shadow:0 4px 12px rgba(0,0,0,.25)';
+    document.body.appendChild(toast);
+    requestAnimationFrame(function () { toast.style.opacity = '1'; });
+    setTimeout(function () {
+      toast.style.opacity = '0';
+      setTimeout(function () { toast.remove(); }, 250);
+    }, 500);
+  }
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      // click position (fall back to the icon's location for keyboard activation)
+      var x = e.clientX, y = e.clientY;
+      if (!x && !y) {
+        var r = link.getBoundingClientRect();
+        x = r.left + r.width / 2;
+        y = r.top;
+      }
+      var email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
+      copyText(email).then(function () {
+        showToast('Email copied!', x, y);
+      }).catch(function () {
+        showToast(email, x, y);
+      });
+    });
+  });
+});
+</script>

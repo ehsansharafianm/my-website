@@ -25,4 +25,6 @@ slides: ""
 links:
   - type: pdf
     url: "/uploads/haptic-feedback-gait-2025.pdf"
+  - name: DOI
+    url: "https://doi.org/10.1109/ACCESS.2025.3606339"
 ---

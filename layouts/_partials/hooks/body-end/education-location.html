@@ -1,0 +1,19 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.resume-biography p.text-gray-700.text-base').forEach(function (p) {
+    if (p.dataset.locDone) return;
+    var txt = p.textContent.trim();
+    var i = txt.indexOf(',');
+    if (i === -1) return;
+    var uni = txt.slice(0, i).trim();
+    var loc = txt.slice(i + 1).trim();
+    p.textContent = uni;
+    p.appendChild(document.createElement('br'));
+    var span = document.createElement('span');
+    span.className = 'text-gray-500 dark:text-gray-400 text-sm';
+    span.textContent = loc;
+    p.appendChild(span);
+    p.dataset.locDone = '1';
+  });
+});
+</script>

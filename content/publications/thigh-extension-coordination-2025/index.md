@@ -26,4 +26,7 @@ slides: ""
 links:
   - type: pdf
     url: "/uploads/thigh-extension-coordination-2025.pdf"
+  - name: DOI
+    url: "https://doi.org/10.1016/j.jbiomech.2025.112525"
+    
 ---

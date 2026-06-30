@@ -24,4 +24,6 @@ slides: ""
 links:
   - type: pdf
     url: "/uploads/screw-theory-wrench-2021.pdf"
+  - name: DOI
+    url: "https://doi.org/10.1017/S026357472100117X"
 ---

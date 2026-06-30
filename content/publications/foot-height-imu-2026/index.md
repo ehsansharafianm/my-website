@@ -32,4 +32,6 @@ slides: ""
 links:
   - type: pdf
     url: "/uploads/foot-height-imu-2026.pdf"
+  - name: DOI
+    url: "https://www.mdpi.com/3889232"
 ---

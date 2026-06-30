@@ -17,12 +17,20 @@ affiliations:
 
 links:
   - icon: at-symbol
-    url: mailto:ehsan.sharafian@maine.edu
+    url: 'mailto:ehsan.sharafian@maine.edu'
     label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/ehsansharafianm
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/ehsan-sharafian-m
+    label: LinkedIn
+  - icon: brands/github
+    url: https://github.com/ehsansharafianm
+    label: GitHub
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Ehsan-Sharafian-Moghaddam
+    label: ResearchGate
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
+    label: Google Scholar
 
 interests:
   - Wearable IMU Sensing
@@ -34,7 +42,25 @@ interests:
 education:
   - degree: PhD in Mechanical Engineering
     institution: University of Maine
-    start: 2021-09-01
-    end: ''
+    location: 'Orono, ME, USA'
+    year: 'Sep 2023 – Present'
+    start: 'Sep 2023'
+    end: 'Present'
     summary: |
-      Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. Research on wearable IMU-based sensing, gait analysis, and haptic feedback systems for fall prevention.
+      Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. Thesis: Smart Real-time Gait Rehabilitation System.
+  - degree: M.Sc. in Mechanical Engineering
+    institution: Amirkabir University of Technology
+    location: 'Tehran, Iran'
+    year: 'Sep 2017 – Feb 2020'
+    start: 'Sep 2017'
+    end: 'Feb 2020'
+    summary: |
+      Robotics and Control Systems (Tehran Polytechnic). Thesis: Trajectory optimization of a robot arm in the joint and Cartesian spaces.
+  - degree: B.Sc. in Mechanical Engineering
+    institution: University of Tehran
+    location: 'Tehran, Iran'
+    year: 'Sep 2012 – Jul 2017'
+    start: 'Sep 2012'
+    end: 'Jul 2017'
+    summary: |
+      Foundations in mechanical engineering, dynamics, and control systems.

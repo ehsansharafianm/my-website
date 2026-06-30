@@ -23,4 +23,7 @@ image:
   preview_only: false
 projects: []
 slides: ""
+links:
+  - type: pdf
+    url: "/uploads/spot-welding-trajectory-2023.pdf"
 ---

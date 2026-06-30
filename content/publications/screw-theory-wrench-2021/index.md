@@ -21,4 +21,7 @@ image:
   preview_only: false
 projects: []
 slides: ""
+links:
+  - type: pdf
+    url: "/uploads/screw-theory-wrench-2021.pdf"
 ---

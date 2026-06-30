@@ -23,4 +23,7 @@ image:
   preview_only: false
 projects: []
 slides: ""
+links:
+  - type: pdf
+    url: "/uploads/thigh-extension-coordination-2025.pdf"
 ---

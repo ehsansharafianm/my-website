@@ -48,16 +48,6 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
       title: Recent Publications
       text: ''
       count: 0
@@ -67,6 +57,17 @@ sections:
         exclude_featured: false
     design:
       view: citation
+  - block: collection
+    content:
+      title: Featured Publications
+      filters:
+        folders:
+          - publications
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 2
+  
   - block: collection
     id: talks
     content:

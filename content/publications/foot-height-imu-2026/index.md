@@ -31,5 +31,5 @@ projects: []
 slides: ""
 links:
   - type: pdf
-    url: "foot-height.pdf"
+    url: "https://www.mdpi.com/1424-8220/26/10/3166/pdf"
 ---

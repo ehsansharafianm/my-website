@@ -22,4 +22,7 @@ image:
   preview_only: false
 projects: []
 slides: ""
+links:
+  - type: pdf
+    url: "/uploads/imu-activity-recognition-2025.pdf"
 ---

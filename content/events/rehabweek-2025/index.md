@@ -32,9 +32,9 @@ tags:
 featured: true
 
 image:
-  caption: 'Presenting at RehabWeek 2025, Chicago'
+  caption: 'RehabWeek 2025 · Chicago, IL'
   focal_point: Center
-
+  
 links:
   - icon: globe
     name: Conference Website

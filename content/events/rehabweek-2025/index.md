@@ -1,15 +1,12 @@
 ---
-title: "RehabWeek 2025 — Two Poster Presentations"
+title: "RehabWeek 2025 — Chicago"
 date: '2025-05-12T00:00:00Z'
 
 event_name: RehabWeek 2025
 event_url: https://rehabweek.org
 
 location: Chicago, IL, USA
-address:
-  city: Chicago
-  region: IL
-  country: United States
+
 
 summary: Presented two posters at RehabWeek 2025 in Chicago — real-time IMU-based activity recognition and individualized haptic gait training for older adults.
 abstract: |
@@ -58,4 +55,8 @@ A highlight of the trip was visiting the **Shirley Ryan AbilityLab** — their s
 
 ![Shirley Ryan AbilityLab, Chicago](abilitylab.jpg)
 
+I also had the chance to try a self-balancing exoskeleton from **[Wandercraft](https://en.wandercraft.eu/)** — a great hands-on look at where wearable robotics for mobility and gait rehabilitation is heading.
 Sincere thanks to the RehabWeek 2025 organizers, session chairs, and the **American Congress of Rehabilitation Medicine (ACRM)** for such a valuable and inspiring event advancing rehabilitation science.
+
+{{< video src="wandercraft-exo.mp4" controls="yes" >}}
+

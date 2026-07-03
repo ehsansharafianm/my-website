@@ -19,18 +19,21 @@ links:
   - icon: at-symbol
     url: 'mailto:ehsan.sharafian@maine.edu'
     label: E-mail Me
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/ehsan-sharafian-m
-    label: LinkedIn
   - icon: brands/github
     url: https://github.com/ehsansharafianm
     label: GitHub
+  - icon: brands/youtube
+    url: https://www.youtube.com/channel/UCi_Kdle0eAMOUoqO-G_AQ4Q
+    label: YouTube
   - icon: academicons/researchgate
     url: https://www.researchgate.net/profile/Ehsan-Sharafian-Moghaddam
     label: ResearchGate
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
     label: Google Scholar
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/ehsan-sharafian-m
+    label: LinkedIn
 
 interests:
   - Wearable IMU Sensing

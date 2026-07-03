@@ -67,7 +67,7 @@ sections:
         featured_only: true
     design:
       view: article-grid
-      columns: 2
+      columns: 3
   
   - block: collection
     id: talks
@@ -77,7 +77,8 @@ sections:
         folders:
           - events
     design:
-      view: card
+      view: article-grid
+      columns: 2
   - block: collection
     id: news
     content:

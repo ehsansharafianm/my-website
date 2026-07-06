@@ -21,11 +21,22 @@
 
   /* Bigger tool labels */
   #skills .text-sm.font-medium {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
   }
 
   /* Bigger category headings (Programming Languages, Relevant Software) */
   #skills h3.text-xs {
-    font-size: 0.85rem;
+    font-size: 1rem;
+  }
+
+  /* On phones, drop the side lines so long headings stay centered */
+  @media (max-width: 640px) {
+    #skills h3.text-xs .h-px {
+      display: none;
+    }
+    #skills h3.text-xs {
+      flex-wrap: wrap;
+      text-align: center;
+    }
   }
 </style>

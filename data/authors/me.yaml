@@ -84,3 +84,14 @@ experience:
       text: View project & photos
       url: /projects/surgical-robotics/
       icon: hero/arrow-right
+
+languages:
+  - name: Farsi
+    percent: 100
+    label: Native
+  - name: English
+    percent: 90
+    label: Fluent
+  - name: Spanish
+    percent: 50
+    label: Intermediate

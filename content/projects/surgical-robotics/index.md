@@ -39,6 +39,9 @@ Beyond engineering, I trained surgeons and medical students on operating the rob
 
 ![Surgeon practicing laparoscopic procedures on the robot](surgeon_training_laparoscopic.jpg)
 
+![Surgery room](surgical_robot_operating_room.jpg)
+
+
 
 ## Technical Stack
 

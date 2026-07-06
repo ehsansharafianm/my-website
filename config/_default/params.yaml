@@ -92,7 +92,7 @@ hugoblox:
     # Feature toggles
     search: false
     theme_toggle: true
-    theme_picker: true
+    theme_picker: false
     language_switcher: true
     # Call-to-action button
     cta:

@@ -72,13 +72,14 @@ experience:
       Developed real-time control systems for advanced surgical robots at Sina Robotics and Medical Innovators. Focused on inverse kinematics algorithms, surgeon-robot interface design, and training platforms for minimally invasive laparoscopic surgery.
 
       **Key Contributions:**
-      - Developed real-time control systems for multi-DOF surgical robotic arms using TwinCAT (Beckhoff automation platform)
-      - Designed and implemented graphical user interfaces (GUI) in Python for intuitive surgeon-robot interaction
-      - Implemented inverse kinematics algorithms enabling precise, coordinated robotic movements for surgical procedures
-      - Trained surgeons and medical students on robot operation, safety protocols, and clinical best practices
+      - Developed real-time control systems for multi-DOF surgical robotic arms 
+      - Using TwinCAT (Beckhoff automation platform) as the PLC controller
+      - Designed and implemented GUI in Python for intuitive surgeon-robot interaction
+      - Refining inverse kinematics algorithms enabling precise movements for surgical procedures
+      - Trained surgeonson robot operation, safety protocols, and clinical best practices
       - Collaborated on hardware-software integration for haptic feedback and force control systems
 
-      **Technical Stack:** TwinCAT 3 • Python • MATLAB • Real-time Control Systems • Inverse Kinematics • Laparoscopic Robotics
+      **Technical Stack:** TwinCAT 3 • Python • MATLAB • Inverse Kinematics • Laparoscopic Robotics
     button:
       text: View project & photos
       url: /projects/surgical-robotics/

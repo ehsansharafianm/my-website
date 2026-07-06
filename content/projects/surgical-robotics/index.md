@@ -13,7 +13,7 @@ links:
     name: Company Website
     url: https://sinamed.ir/
 image:
-  caption: 'Multi-DOF surgical robot system'
+  caption: 'Laproscopic surgical robot system'
   focal_point: Center
 ---
 
@@ -23,7 +23,7 @@ During my time at [Sina Robotics and Medical Innovators](https://sinamed.ir/), I
 
 ## The System
 
-The platform is a multi-degree-of-freedom surgical robot with dual manipulator arms, a surgeon console, and a training simulator for laparoscopic procedures.
+The platform is a multi-degree-of-freedom surgical robot with dual manipulator arms, a surgeon console, and a training simulator for laparoscopic procedures. It was designed for telesurgery, enabling a surgeon to operate remotely over a network connection. During our testing, we successfully demonstrated this capability across two separate hospitals: the surgeon console was located in one hospital while the robot performed the procedure in another, carrying out a real surgical operation in real time.
 
 ![Multi-DOF surgical robot in the operating room](robot_and_controller_system.jpg)
 

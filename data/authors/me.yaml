@@ -93,5 +93,5 @@ languages:
     percent: 90
     label: Fluent
   - name: Spanish
-    percent: 50
+    percent: 40
     label: Intermediate

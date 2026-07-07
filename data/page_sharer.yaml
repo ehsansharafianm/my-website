@@ -1,12 +1,12 @@
 links:
   - id: email
-    url: 'mailto:?subject={title}&body={url}'
+    url: 'mailto:ehsan.sharafian@maine.edu'
     title: Email
     icon: hero/at-symbol
     enable: true
 
   - id: linkedin
-    url: 'https://www.linkedin.com/shareArticle?url={url}&title={title}'
+    url:  'https://www.linkedin.com/in/ehsan-sharafian-m'
     title: LinkedIn
     icon: brands/linkedin
     enable: true

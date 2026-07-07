@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    var email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
+    if (!email) return; // skip "share by email" buttons that have no address
+
     link.addEventListener('click', function (e) {
       e.preventDefault();
       // click position (fall back to the icon's location for keyboard activation)
@@ -44,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         x = r.left + r.width / 2;
         y = r.top;
       }
-      var email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
       copyText(email).then(function () {
         showToast('Email copied!', x, y);
       }).catch(function () {

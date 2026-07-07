@@ -18,6 +18,13 @@ sections:
       date_format: 'Jan 2006'
       # Education or Experience section first?
       is_education_first: true
+  - block: resume-experience
+    id: academic-exp
+    content:
+      username: academic
+    design:
+      date_format: 'Jan 2006'
+      is_education_first: false
   - block: resume-skills
     content:
       title: Hobbies

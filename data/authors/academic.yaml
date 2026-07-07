@@ -1,0 +1,12 @@
+schema: hugoblox/author/v1
+slug: academic
+experience:
+  - role: Laboratory Research Assistant
+    org: New Technology Research Center (NTRC), Amirkabir University of Technology
+    start: 2020-11-01
+    end: 2022-11-01
+    summary: |
+      - Assisted in conducting undergraduate research projects
+      - Provided laboratory services for graduate students
+      - Maintained laboratory equipment and coordinated repairs
+      - Helped organize the 9th RSI International Conference on Robotics and Mechatronics (ICROM)

@@ -1,11 +1,25 @@
 links:
-  - id: linkedin
-    url: 'https://www.linkedin.com/shareArticle?url={url}&title={title}'
-    title: LinkedIn
-    icon: brands/linkedin
-    enable: true
   - id: email
     url: 'mailto:?subject={title}&body={url}'
     title: Email
     icon: hero/at-symbol
     enable: true
+
+  - id: linkedin
+    url: 'https://www.linkedin.com/shareArticle?url={url}&title={title}'
+    title: LinkedIn
+    icon: brands/linkedin
+    enable: true
+
+  - id: ResearchGate
+    url: https://www.researchgate.net/profile/Ehsan-Sharafian-Moghaddam
+    title: ResearchGate
+    icon: academicons/researchgate
+    enable: true
+
+  - id: Google Scholar
+    url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
+    title: Google Scholar
+    icon: academicons/google-scholar
+    enable: true
+

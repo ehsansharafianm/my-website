@@ -109,16 +109,21 @@ sections:
       view: article-grid
       columns: 3
   
-  - block: collection
-    id: talks
+  
+  - block: resume-experience
+    id: experience
     content:
-      title: Recent Talks
-      filters:
-        folders:
-          - events
+      username: me
     design:
-      view: article-grid
-      columns: 2
+      date_format: 'Jan 2006'
+      is_education_first: false
+  - block: resume-experience
+    id: academic-exp
+    content:
+      username: academic
+    design:
+      date_format: 'Jan 2006'
+      is_education_first: false
   - block: collection
     id: projects
     content:
@@ -128,6 +133,16 @@ sections:
       filters:
         folders:
           - projects
+    design:
+      view: article-grid
+      columns: 2
+  - block: collection
+    id: talks
+    content:
+      title: Recent Talks
+      filters:
+        folders:
+          - events
     design:
       view: article-grid
       columns: 2

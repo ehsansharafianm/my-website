@@ -23,6 +23,7 @@ sections:
       title: Hobbies
       username: me
   - block: resume-awards
+    id: awards
     content:
       title: Awards
       username: me

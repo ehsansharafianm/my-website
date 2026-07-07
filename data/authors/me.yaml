@@ -85,6 +85,26 @@ experience:
       url: /projects/surgical-robotics/
       icon: hero/arrow-right
 
+awards:
+  - title: Graduate Student Government (GSG) Award — Conference Proposal
+    awarder: University of Maine
+    date: "2025-03-01"
+    icon: hero/trophy
+  - title: Flagship Fellowship Award
+    awarder: University of Maine
+    date: "2024-09-01"
+    summary: Competitive university-wide fellowship (Sep 2024 – Sep 2025).
+    icon: hero/academic-cap
+  - title: Ranked 216th among 20,000+ participants in the national university entrance exam (Master's)
+    date: "2017-06-01"
+    icon: hero/chart-bar
+  - title: Ranked 316th among 400,000+ participants in the national university entrance exam (Bachelor's)
+    date: "2012-07-01"
+    icon: hero/chart-bar
+  - title: 3rd Place, Team Category — RoboCup Junior, Tehran
+    date: "2010-12-01"
+    icon: hero/trophy
+
 languages:
   - name: Farsi
     percent: 100

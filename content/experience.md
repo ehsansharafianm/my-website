@@ -18,20 +18,6 @@ sections:
       date_format: 'Jan 2006'
       # Education or Experience section first?
       is_education_first: true
-
-  - block: markdown
-    content:
-      title: 'Academic Experience'
-      text: |-
-        ### Laboratory Research Assistant
-        **New Technology Research Center (NTRC), Amirkabir University of Technology** · Nov 2021 – Present
-
-        - Assisted in conducting undergraduate research projects
-        - Provided laboratory services for graduate students
-        - Maintained laboratory equipment and coordinated repairs
-        - Helped organize the 9th RSI International Conference on Robotics and Mechatronics (ICROM)
-    design:
-      columns: '1'
   - block: resume-skills
     content:
       title: Hobbies

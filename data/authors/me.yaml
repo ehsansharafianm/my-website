@@ -85,6 +85,25 @@ experience:
       url: /projects/surgical-robotics/
       icon: hero/arrow-right
 
+  - role: Robotics R&D Engineer (Master's Thesis Project)
+    org: Automobile Manufacturing Company
+    start: 2018-01-01
+    end: 2020-02-28
+    summary: |
+      Conducted robotics research in collaboration with a major automobile manufacturer for my M.Sc. thesis, focused on optimizing the motion of spot-welding robots on the vehicle-body production line.
+
+      **Key Contributions:**
+      - Developed time-optimal and energy-optimal trajectory planning for a 6-DOF serial spot-welding robot in both joint and Cartesian spaces
+      - Applied genetic algorithm and particle swarm optimization to minimize welding-gun travel time and energy consumption while respecting joint limits and gun-orientation constraints
+      - Reduced spot-welding cycle time by up to 24% (minimum-time) and up to 11% (multi-objective) versus the manually programmed production trajectories
+      - Modeled welding-gun position and orientation simultaneously for accurate approach to each weld point on the car body
+
+      **Technical Stack:** MATLAB • Robot Kinematics • Trajectory Optimization • Genetic Algorithm • Particle Swarm Optimization
+    button:
+      text: View project & photos
+      url: /projects/robotics-arm/        # <-- matches your renamed folder
+      icon: hero/arrow-right
+
 awards:
   - title: Graduate Student Government (GSG) Award — Conference Proposal
     awarder: University of Maine

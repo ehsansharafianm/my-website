@@ -1,0 +1,16 @@
+{{/* Project override: load only .html hook files, ignore .DS_Store and other junk */}}
+{{ $loaded := false }}
+{{ $partial_dir := printf "hooks/%s/" .hook }}
+{{ $context := .context }}
+{{ $hook_dir_path := path.Join "layouts/_partials" $partial_dir }}
+{{ with try (os.ReadDir $hook_dir_path) }}
+  {{ with .Value }}
+    {{ range . }}
+      {{ if and (not .IsDir) (strings.HasSuffix .Name ".html") }}
+        {{ $partial_path := path.Join $partial_dir .Name }}
+        {{ partial $partial_path $context }}
+        {{ $loaded = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

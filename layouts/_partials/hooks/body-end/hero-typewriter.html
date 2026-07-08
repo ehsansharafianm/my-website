@@ -1,0 +1,45 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sec = document.getElementById('section-resume-biography-3');
+  if (!sec) return;
+  // Insert after the last affiliation line (University of Maine);
+  // fall back to the role line if no affiliation is found.
+  var affs = sec.querySelectorAll('p.text-lg.text-gray-700');
+  var anchor = affs.length ? affs[affs.length - 1] : sec.querySelector('p.text-2xl.font-semibold');
+  if (!anchor || anchor.dataset.typed) return;
+  anchor.dataset.typed = '1';
+
+  var line = document.createElement('p');
+  line.className = 'text-lg font-medium text-gray-600 dark:text-gray-300 mt-1';
+  line.innerHTML = '<span id="hb-typewriter"></span><span id="hb-caret">|</span>';
+  anchor.insertAdjacentElement('afterend', line);
+
+  var css = document.createElement('style');
+  css.textContent = '#hb-caret{animation:hbBlink 1s step-end infinite}@keyframes hbBlink{50%{opacity:0}}';
+  document.head.appendChild(css);
+
+  var words = [
+    'Wearable Sensing',
+    'Gait Analysis',
+    'Haptic Feedback',
+    'Fall Prevention in Older Adults'
+  ];
+  var el = document.getElementById('hb-typewriter');
+  var wi = 0, ci = 0, deleting = false;
+  function tick() {
+    var w = words[wi];
+    if (!deleting) {
+      ci++;
+      el.textContent = w.slice(0, ci);
+      if (ci === w.length) { deleting = true; return setTimeout(tick, 1800); }
+      return setTimeout(tick, 70);
+    }
+    ci--;
+    el.textContent = w.slice(0, ci);
+    if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; return setTimeout(tick, 350); }
+    return setTimeout(tick, 40);
+  }
+  setTimeout(tick, 600);
+});
+</script>

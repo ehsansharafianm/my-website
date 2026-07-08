@@ -14,7 +14,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/resume.pdf
+        url: uploads/Ehsan-Sharafian-CV.pdf
       headings:
         about: ''
         education: ''
@@ -46,6 +46,18 @@ sections:
         Please reach out to collaborate. 
     design:
       columns: '1'
+
+  - block: collection
+    id: papers
+    content:
+      title: Publications
+      text: ''
+      count: 0
+      filters:
+        folders:
+          - publications
+    design:
+      view: citation
 
   - block: tech-stack
     id: skills
@@ -85,31 +97,6 @@ sections:
       style: grid
       show_levels: false
 
-  - block: collection
-    id: papers
-    content:
-      title: Recent Publications
-      text: ''
-      count: 0
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    content:
-      title: Featured Publications
-      count: 0
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 3
-  
-  
   - block: resume-experience
     id: experience
     content:

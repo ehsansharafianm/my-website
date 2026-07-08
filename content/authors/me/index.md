@@ -1,6 +1,6 @@
 ---
 title: Ehsan Sharafian M
-bio: PhD Candidate in Mechanical Engineering specializing in wearable IMU-based sensing, gait analysis, and haptic feedback systems for fall prevention in elderly adults.
+bio: PhD Candidate in Mechanical Engineering specializing in wearable IMU-based sensing, gait analysis, and haptic feedback systems for fall prevention in older adults.
 role: PhD Candidate in Mechanical Engineering
 avatar:
   filename: avatar.jpg
@@ -29,7 +29,7 @@ education:
 ---
 ## About Me
 
-I am a third-year PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research focuses on developing wearable inertial measurement unit (IMU)-based sensing systems for real-time gait analysis and fall prevention in elderly adults.
+I am a third-year PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research focuses on developing wearable inertial measurement unit (IMU)-based sensing systems for real-time gait analysis and fall prevention in older adults.
 
 ## Research Focus
 

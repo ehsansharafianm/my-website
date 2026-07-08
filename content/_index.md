@@ -48,6 +48,17 @@ sections:
       columns: '1'
 
   - block: collection
+    id: featured
+    content:
+      title: Featured Publications
+      filters:
+        folders:
+          - publications
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 3
+  - block: collection
     id: papers
     content:
       title: Publications

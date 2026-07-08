@@ -17,7 +17,7 @@ abstract: "Interlimb coordination can be used as a metric to study the response 
 tags:
   - Haptic Feedback Systems
   - Gait Analysis
-featured: true
+featured: false
 image:
   focal_point: ""
   preview_only: false

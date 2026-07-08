@@ -15,7 +15,7 @@ abstract: "This paper aims at shedding lights on two approaches that were recent
 tags:
   - Robotics
   - Multibody Dynamics
-featured: true
+featured: false
 image:
   focal_point: ""
   preview_only: false

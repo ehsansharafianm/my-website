@@ -35,6 +35,18 @@ sections:
         shape: circle # Options: circle (default), square, rounded
   - block: markdown
     content:
+      title: ''
+      subtitle: ''
+      text: |-
+        <div class="hb-stats">
+          <div class="hb-stat"><span class="hb-stat-num" data-count="6">0</span><span class="hb-stat-label">Journal Publications</span></div>
+          <div class="hb-stat"><span class="hb-stat-num" data-count="4">0</span><span class="hb-stat-label">Conference Presentations</span></div>
+          <div class="hb-stat"><span class="hb-stat-num" data-count="8" data-suffix="+">0</span><span class="hb-stat-label">Years in Robotics Research</span></div>
+        </div>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
       title: '📚 My Research'
       subtitle: ''
       text: |-

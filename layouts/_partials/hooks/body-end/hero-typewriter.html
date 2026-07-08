@@ -3,14 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var sec = document.getElementById('section-resume-biography-3');
   if (!sec) return;
-  var role = sec.querySelector('p.text-2xl.font-semibold');
-  if (!role || role.dataset.typed) return;
-  role.dataset.typed = '1';
+  // Insert after the last affiliation line (University of Maine);
+  // fall back to the role line if no affiliation is found.
+  var affs = sec.querySelectorAll('p.text-lg.text-gray-700');
+  var anchor = affs.length ? affs[affs.length - 1] : sec.querySelector('p.text-2xl.font-semibold');
+  if (!anchor || anchor.dataset.typed) return;
+  anchor.dataset.typed = '1';
 
   var line = document.createElement('p');
   line.className = 'text-lg font-medium text-gray-600 dark:text-gray-300 mt-1';
   line.innerHTML = '<span id="hb-typewriter"></span><span id="hb-caret">|</span>';
-  role.insertAdjacentElement('afterend', line);
+  anchor.insertAdjacentElement('afterend', line);
 
   var css = document.createElement('style');
   css.textContent = '#hb-caret{animation:hbBlink 1s step-end infinite}@keyframes hbBlink{50%{opacity:0}}';

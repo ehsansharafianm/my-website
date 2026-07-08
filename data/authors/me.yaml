@@ -9,7 +9,7 @@ postnominals:
   - PhD Candidate
 role: PhD Candidate in Mechanical Engineering
 bio: |
-  I am a third-year PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research focuses on developing wearable inertial measurement unit (IMU)-based sensing systems for real-time gait analysis and fall prevention in elderly adults.
+  I am a third-year PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research focuses on developing wearable inertial measurement unit (IMU)-based sensing systems for real-time gait analysis and fall prevention in older adults.
 
 affiliations:
   - name: University of Maine
@@ -28,6 +28,9 @@ links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
     label: Google Scholar
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0001-8165-7375
+    label: ORCID
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/ehsan-sharafian-m
     label: LinkedIn
@@ -36,7 +39,7 @@ interests:
   - Wearable IMU Sensing
   - Gait Analysis
   - Haptic Feedback Systems
-  - Fall Prevention in Elderly
+  - Fall Prevention in Older Adults
   - Mobile & Real-time Processing
 
 education:

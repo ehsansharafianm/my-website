@@ -3,11 +3,11 @@ main:
   - name: Bio
     url: /
     weight: 10
-  - name: Skills
-    url: /#skills
-    weight: 11
   - name: Papers
     url: /#papers
+    weight: 11
+  - name: Skills
+    url: /#skills
     weight: 12
   - name: Experience
     url: /#experience 

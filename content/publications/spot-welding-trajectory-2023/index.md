@@ -17,7 +17,7 @@ abstract: "This paper targets the trajectory planning of a serial robot which is
 tags:
   - Robotics
   - Trajectory Optimization
-featured: true
+featured: false
 image:
   focal_point: ""
   preview_only: false

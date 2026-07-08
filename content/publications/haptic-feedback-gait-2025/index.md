@@ -18,7 +18,7 @@ abstract: "Gait speed is a key indicator of mobility and health in older adults,
 tags:
   - Haptic Feedback Systems
   - Gait Analysis
-  - Fall Prevention in Elderly
+  - Fall Prevention in Older Adults
 featured: true
 image:
   focal_point: ""

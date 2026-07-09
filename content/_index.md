@@ -38,12 +38,12 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am a PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research develops
-        wearable IMU-based sensing systems for real-time gait analysis and fall prevention in older adults.
+        My research focuses on intelligent wearable systems for human movement analysis and digital health. I develop technologies that integrate wearable IMU sensing, haptic feedback, machine learning, biomechanical modeling, and real-time mobile applications to support gait analysis, activity recognition, fall prevention, and home-based rehabilitation.
+        
+        I am interested in bringing movement assessment beyond traditional laboratory and clinical settings by creating practical systems that provide real-time feedback and support mobility, rehabilitation, and independent living. My work combines hardware, software, and biomechanics, including Arduino-based prototypes, PCB modules, native Android applications, and data analysis pipelines in Python and MATLAB.
+        
+        My background also includes robotics, including surgical robotics, robot arms, parallel manipulators, kinematic and dynamic modeling, trajectory planning, control systems, and graphical user interfaces. This foundation continues to shape my approach to developing intelligent systems for healthcare and human movement applications.
 
-        My work spans distributed IMU networks, foot-clearance estimation, and adaptive haptic feedback, bridging laboratory research and real-world applications.
-
-        Please reach out to collaborate. 
     design:
       columns: '1'
 

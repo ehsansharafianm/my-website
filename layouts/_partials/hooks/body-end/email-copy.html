@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    if (link.classList.contains('contact-send')) return; // let the Send button open the mail app
     var email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
     if (!email) return; // skip "share by email" buttons that have no address
 

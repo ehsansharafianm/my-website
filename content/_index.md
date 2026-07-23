@@ -165,13 +165,13 @@ sections:
                 <span class="contact-ic" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
                 </span>
-                <span class="contact-txt"><span class="contact-lbl">University email · click to copy</span>ehsan.sharafian@maine.edu</span>
+                <span class="contact-txt"><span class="contact-lbl">University email</span>ehsan.sharafian@maine.edu</span>
               </a>
               <a class="contact-row" href="mailto:ehsan.sharafian.m@gmail.com">
                 <span class="contact-ic" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
                 </span>
-                <span class="contact-txt"><span class="contact-lbl">Personal email · click to copy</span>ehsan.sharafian.m@gmail.com</span>
+                <span class="contact-txt"><span class="contact-lbl">Personal email</span>ehsan.sharafian.m@gmail.com</span>
               </a>
             </div>
           </div>

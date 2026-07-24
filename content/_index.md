@@ -13,8 +13,8 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
-        url: uploads/Ehsan-Sharafian-CV.pdf
+        text: Download Resume
+        url: uploads/Ehsan-Sharafian-Resume.pdf
       headings:
         about: ''
         education: ''

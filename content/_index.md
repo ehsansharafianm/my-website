@@ -13,7 +13,7 @@ sections:
       text: ''
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download Resume
+        text: Resume
         url: uploads/Ehsan-Sharafian-Resume.pdf
       headings:
         about: ''

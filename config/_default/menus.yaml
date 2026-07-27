@@ -12,9 +12,6 @@ main:
   - name: Experience
     url: /#experience 
     weight: 20
-  - name: Featured
-    url: /#featured
-    weight: 25
   - name: Projects
     url: /#projects
     weight: 30

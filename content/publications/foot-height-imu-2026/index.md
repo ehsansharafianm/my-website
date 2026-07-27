@@ -13,7 +13,7 @@ publication:
   pages: "3166"
 peer_reviewed: true
 open_access: true
-abstract: "Wearable sensors are transformative tools for continuous gait assessment in daily life. Tripping, a leading cause of falls, is closely linked to inadequate foot clearance, making accurate foot height measurement critical for fall risk evaluation. Inertial measurement units offer a practical solution for foot trajectory reconstruction; however, conventional drift correction methods such as zero-velocity updates fail to adequately address cumulative height errors. Recent kinematic constraint-based approaches improve height accuracy but remain limited to offline processing and lack simultaneous activity classification. To address these gaps, we developed a real-time, single-IMU system for continuous foot height trajectory reconstruction with simultaneous classification of five locomotion activities deployed on a smartphone. Twenty healthy adults were recruited for model training and independent validation. Level walking maintained ground reference (0.0 cm, 95% CI: [−1.8, 1.8] cm), cumulative height errors remained below 1.1 cm across ramp and stair negotiation with a mean absolute error of 0.42%, and obstacle clearance was quantified. The system achieved 96.08% overall classification accuracy with less than one gait cycle latency. Toe height was estimated through rigid-body transformation with comparable accuracy to the foot height. This framework provides a practical foundation for real-time gait intervention and fall prevention applications."
+abstract: "We developed a real-time, single-IMU smartphone system that reconstructs continuous foot-height trajectories and simultaneously classifies five locomotion activities entirely on-device. A Zero Height Change (ZHC) constraint corrects the cumulative vertical drift that limits conventional zero-velocity methods, while a heel-strike velocity feature drives adaptive activity classification. Validated on twenty adults, the system reached 96.08% classification accuracy with less than one gait-cycle latency and kept cumulative height errors below 1.1 cm across ramp and stair negotiation — providing a practical basis for real-time gait intervention and fall prevention."
 tags:
   - Wearable Sensing
   - Foot Clearance
@@ -35,3 +35,47 @@ links:
   - name: DOI
     url: "https://www.mdpi.com/3889232"
 ---
+
+## Why it matters
+
+Tripping is a leading cause of falls, and it is closely tied to how high we lift our feet while walking. Measuring **foot clearance** continuously, out in daily life, could flag fall risk early — but doing it well with a wearable sensor is hard:
+
+- A single inertial measurement unit (IMU) drifts, so integrated foot height accumulates error over time.
+- The usual fix (zero-velocity updates) does not fully remove **vertical** drift.
+- More accurate methods work only **offline** and do not tell you what activity the person is doing.
+
+## What I built
+
+A **real-time, single-IMU system that runs entirely on a smartphone** — no cloud, no multi-sensor setup. It reconstructs the foot's height trajectory stride by stride *and* classifies five locomotion activities (level walking, ramp ascent/descent, stair ascent/descent) at the same time.
+
+![The IMU is mounted on top of the foot; the toe position is recovered from the sensor pose by a rigid-body transformation](imu-toe-schematic.jpg)
+
+Key contributions:
+
+- **On-device Android app** for stride-by-stride foot-clearance measurement and live activity classification.
+- **Zero Height Change (ZHC) constraint** — a biomechanically grounded correction that cancels cumulative vertical drift at each stride boundary.
+- **Heel-strike velocity error** used as a compact, physically meaningful feature to adaptively pick the right reconstruction model per activity.
+- **Toe-height estimation** from the IMU pose through a rigid-body transformation, with accuracy comparable to the foot itself.
+
+![The custom Android app: (a) system and sensor controls, (b) activity labeling, (c) live activity detection with gait parameters, (d) deployment on stairs](app-interface.jpg)
+
+## Validating the height measurement
+
+The reconstructed foot trajectories separate cleanly by activity, and the continuous height signal tracks real-world ramps and stairs across a full walking circuit.
+
+![Reconstructed foot trajectories for the five activities; dashed boxes mark stair entry/exit transition strides](foot-trajectories.jpg)
+
+![Continuous foot-height trajectory across a full circuit of level ground, ramps, and stairs, with zero-velocity points marked](foot-height-activities.jpg)
+
+To confirm the system measures real clearance, participants stepped over boxes of known heights and the estimated peak stride height was checked against each obstacle.
+
+![Obstacle-clearance validation: participants step over boxes of increasing height, and the peak vertical displacement is compared against each box](obstacle-clearance.jpg)
+
+## Results
+
+- **96.08%** overall activity-classification accuracy, with **less than one gait cycle** of latency.
+- Level walking stayed at the ground reference (**0.0 cm**, 95% CI −1.8 to 1.8 cm).
+- Cumulative height error stayed **below 1.1 cm** across ramp and stair negotiation (mean absolute error **0.42%**).
+- Toe height was recovered with accuracy comparable to foot height.
+
+Together, this gives a practical foundation for **real-time gait feedback and fall-prevention** tools that could one day run on the phone already in someone's pocket.

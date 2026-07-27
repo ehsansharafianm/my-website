@@ -11,7 +11,7 @@ publication:
   name: "IEEE Access"
 peer_reviewed: true
 open_access: true
-abstract: "Real-time implementation of human activity recognition systems is often challenging due to high computational costs and the need for extensive datasets. Existing models rarely account for older adults, particularly those with mobility limitations. This study proposes a lightweight classifier for human activity recognition that utilizes minimal biomechanical features based on thigh and foot angles measured by two IMUs to classify activities, including walking, stair ascent and descent, standing, and sitting. Data from 10 young adults were used to train the model, which was subsequently tested on separate cohorts of 5 young and 10 older adults. A KNN classifier was implemented in a smartphone application for real-time use. To optimize its performance, an adaptive segmentation method was developed to accurately detect toe-off in different activities and reduce computational overhead. The model was trained to recognize mobility limitations in older adults, non-alternating leg stair negotiation, where individuals rely on one leg. Rather than using deep learning architectures, the proposed physics-based framework uses simple and interpretable biomechanical features to enable real-time implementation on resource-constrained devices. The system achieved overall 99% detection accuracy for young and old adults with normal movement patterns and achieved 93% accuracy in distinguishing non-alternating leg stair negotiation from normal stair negotiation patterns in older adults. The results demonstrate the feasibility of a computationally efficient model with minimal features for real-time applications. By addressing the movement characteristics of older adults, this study contributes to the development of an accessible health monitoring system for real-world activity detection in aging populations."
+abstract: "We built a lightweight, real-time activity classifier that runs on a smartphone and uses only two interpretable biomechanical features, the thigh and foot angles measured by two IMUs, to recognize five daily activities: walking, stair ascent, stair descent, standing, and sitting. Instead of a deep network, a simple physics based KNN model paired with an adaptive toe-off segmentation keeps the computation light enough for real-time use on everyday devices. Trained on ten young adults and tested on separate cohorts of five young and ten older adults, the system reached 99% accuracy for normal movement and 93% accuracy in telling non-alternating leg stair negotiation, a common older-adult mobility pattern, apart from normal stair negotiation. The result is an accessible, computationally efficient health-monitoring approach tuned to how older adults actually move."
 tags:
   - Activity Recognition
   - Wearable IMU Sensing
@@ -28,3 +28,45 @@ links:
   - name: DOI
     url: "https://doi.org/10.1109/ACCESS.2025.3606339"
 ---
+
+## Why it matters
+
+Knowing what activity a person is doing, and how well they are doing it, is the foundation of any real-world health-monitoring tool. But most activity-recognition systems fall short where it matters most:
+
+- They lean on **deep learning and large datasets**, so they are too heavy to run in real time on a phone.
+- They are trained almost entirely on **young, healthy adults**, and quietly assume everyone moves the same way.
+- Older adults with mobility limits often negotiate stairs with a **non-alternating leg (NAL)** pattern, leading with the same leg every step, and generic models simply misread this as normal.
+
+## What I built
+
+A **real-time, smartphone-based classifier** that uses only two interpretable inputs, the **thigh angle and the foot angle** from two small IMUs, to recognize five everyday activities: walking, stair ascent, stair descent, standing, and sitting.
+
+![Two IMUs on the thigh and foot stream to a phone over Bluetooth; the thigh and foot angles are tracked across one stair cycle from toe-off to heel strike](imu-placement-cycle.jpg)
+
+Key contributions:
+
+- **Minimal biomechanical features.** Rather than a deep network, a simple and interpretable **physics based KNN model** classifies activity from just the thigh and foot angles, light enough to run live on a phone.
+- **Adaptive toe-off segmentation.** A segmentation step detects toe-off across different activities to cut each stride cleanly and reduce computation.
+- **On-device Android app** that collects labeled data and reports activity in real time.
+- **Built for older adults.** The model is explicitly trained to recognize the non-alternating leg stair pattern that generic classifiers miss.
+
+![The app in use for live data collection and labeling across standing, walking, stair ascent, stair descent, and sitting](app-data-collection.jpg)
+
+## Recognizing how older adults move
+
+The hard case is stairs. When someone leads with the same leg on every step, the leading and trailing legs trace very different angle patterns, so the system has to read each leg differently.
+
+![The non-alternating leg (NAL) stair pattern, where the same leg leads each step while the other trails](non-alternating-pattern.jpg)
+
+Separating the **leading** leg from the **trailing** leg in the foot and thigh angle traces is what lets the model distinguish this mobility-limited pattern from normal stair negotiation.
+
+![Foot and thigh angle variations for leading versus trailing legs during non-alternating stair ascent and descent](foot-thigh-angles-nal.jpg)
+
+## Results
+
+- **99%** activity-classification accuracy for young and older adults with normal movement patterns.
+- **93%** accuracy in distinguishing non-alternating leg stair negotiation from normal stair negotiation in older adults.
+- Runs in **real time on a smartphone**, with no deep-learning model and no cloud.
+- Validated on cohorts the model never trained on, including **ten older adults**.
+
+Together this shows that a small set of well-chosen biomechanical features can power an accessible, real-time health-monitoring system that respects how aging populations actually move.

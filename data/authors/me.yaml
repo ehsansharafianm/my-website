@@ -33,6 +33,9 @@ links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/ehsan-sharafian-m
     label: LinkedIn
+  - icon: brands/youtube
+    url: https://www.youtube.com/@ehsansharafian
+    label: YouTube
 
 interests:
   - Wearable Sensors

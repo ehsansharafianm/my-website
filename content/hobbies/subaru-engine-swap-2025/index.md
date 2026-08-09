@@ -17,17 +17,17 @@ image:
 
 Some weekends you recharge in the mountains. Others you spend covered in oil in a parking lot, and honestly, those are just as good.
 
-My Subaru Outback had been fighting me for a while. We started out hoping for a modest fix, replacing the valves and valve guides on the original engine to bring it back to life. I pulled the cylinder heads and we went through the valvetrain piece by piece.
+My Subaru Outback had been fighting me for a while, so one weekend we set up shop in the parking lot and got to work.
+
+![Out in the parking lot, first trying to save the original engine](working-on-car.jpg)
+
+We started out hoping for a modest fix, replacing the valves and valve guides on the original engine to bring it back to life. I pulled the cylinder heads and we went through the valvetrain piece by piece.
 
 ![Cylinder head off the engine and in my hands, ready to work on the valves](cylinder-head.jpg)
 
 ![A close look at the valvetrain and camshaft on the bench](valve-train.jpg)
 
-But the old engine had other plans. After a lot of work in the parking lot it became clear it was simply done.
-
-![First attempt: trying to save the original engine](working-on-car.jpg)
-
-So we did what any stubborn mechanical engineer would do. We pulled the whole thing and swapped in a fresh engine.
+But the old engine had other plans. After a lot of work it became clear it was simply done. So we did what any stubborn mechanical engineer would do. We pulled the whole thing and swapped in a fresh engine.
 
 ![Sitting in the empty engine bay, weighing our options](featured.jpg)
 

@@ -27,9 +27,6 @@ links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
     label: Google Scholar
-  - icon: academicons/orcid
-    url: https://orcid.org/0009-0001-8165-7375
-    label: ORCID
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/ehsan-sharafian-m
     label: LinkedIn

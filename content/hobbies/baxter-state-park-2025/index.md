@@ -1,7 +1,7 @@
 ---
 title: "Unplugged in Baxter State Park"
 summary: "A completely off grid summer weekend in Baxter State Park with UMaine friends: hiking Doubletop, canoeing, and grilling saffron jooje kabob."
-date: 2025-07-19
+date: 2026-07-25
 authors:
   - me
 tags:

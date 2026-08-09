@@ -144,6 +144,18 @@ sections:
     design:
       view: article-grid
       columns: 2
+  - block: collection
+    id: hobbies
+    content:
+      title: Hobbies
+      text: "Life outside the lab: camping, mountain trails, road trips, and working on my car."
+      count: 0
+      filters:
+        folders:
+          - hobbies
+    design:
+      view: article-grid
+      columns: 2
   - block: markdown
     id: contact
     content:

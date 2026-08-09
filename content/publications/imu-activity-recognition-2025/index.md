@@ -52,6 +52,21 @@ Key contributions:
 
 ![The app in use for live data collection and labeling across standing, walking, stair ascent, stair descent, and sitting](app-data-collection.jpg)
 
+## See it in action
+
+A short demo of the system running live: the phone screen shows the app classifying activities in real time while a participant walks and negotiates stairs.
+
+<div style="max-width:360px;margin:1.5rem auto;">
+  <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.15);">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+      src="https://www.youtube.com/embed/n6E6TadydAA"
+      title="Real-time activity recognition live demo"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
 ## Recognizing how older adults move
 
 The hard case is stairs. When someone leads with the same leg on every step, the leading and trailing legs trace very different angle patterns, so the system has to read each leg differently.

@@ -1,13 +1,38 @@
 <style>
-  /* Resume CTA: solid teal instead of the theme's primary→secondary gradient */
+  /* Animated rotating gradient border on the Resume CTA (adapted from a UIverse
+     card effect, recolored to the site's teal/indigo palette). */
+  @property --hb-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
   a[href$="Resume.pdf"]{
-    background:#0d9488 !important;      /* teal-600, constant */
-    background-image:none !important;   /* kill the gradient */
-    box-shadow:0 4px 14px rgba(13,148,136,.30) !important;
-    transition:background .2s ease, box-shadow .2s ease, transform .2s ease !important;
+    position: relative !important;
+    border: 2px solid transparent !important;
+    border-radius: 0.75rem !important;
+    /* inner deep-navy fill (padding-box) + rotating gradient ring (border-box) */
+    background:
+      linear-gradient(#0d9488, #0d9488) padding-box,
+      conic-gradient(from var(--hb-angle),
+        #0d9488, #22d3ee, #6366f1, #22d3ee, #0d9488) border-box !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 18px rgba(13,148,136,.28) !important;
+    animation: hbSpinBorder 3s linear infinite;
+    transition: box-shadow .2s ease, transform .2s ease !important;
   }
   a[href$="Resume.pdf"]:hover{
-    background:#0f766e !important;      /* teal-700 on hover */
-    box-shadow:0 8px 20px rgba(13,148,136,.40) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 26px rgba(99,102,241,.38) !important;
+    animation-duration: 1.8s; /* spin a little faster on hover */
+  }
+
+  @keyframes hbSpinBorder {
+    to { --hb-angle: 360deg; }
+  }
+
+  /* Respect reduced-motion: keep the gradient ring, just stop spinning */
+  @media (prefers-reduced-motion: reduce){
+    a[href$="Resume.pdf"]{ animation: none; }
   }
 </style>

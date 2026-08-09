@@ -10,7 +10,7 @@ tags:
   - Subaru
   - Weekend Project
 image:
-  caption: "Engine out and hanging from the hoist, one very satisfying moment"
+  caption: "In the engine bay, right in the middle of the swap"
   focal_point: "Center"
   preview_only: true
 ---
@@ -29,7 +29,7 @@ But the old engine had other plans. After a lot of work in the parking lot it be
 
 So we did what any stubborn mechanical engineer would do. We pulled the whole thing and swapped in a fresh engine.
 
-![Sitting in the empty engine bay, weighing our options](in-the-engine-bay.jpg)
+![Sitting in the empty engine bay, weighing our options](featured.jpg)
 
 ![The bay stripped down, looking at the bellhousing with the engine out](empty-bay.jpg)
 
@@ -38,6 +38,8 @@ Out with the old, up on the hoist and out of the car.
 ![Lifting the old engine out with the hoist](hoisting-engine.jpg)
 
 I did this alongside my great friend and master wrench, and what could have been a frustrating repair turned into one of my favorite weekends of the semester. Engine hoist, hand tools, a cylinder head on the bench, and a lot of laughs. There is something deeply satisfying about understanding a machine well enough to take its heart out and give it a new one.
+
+![My great friend and master wrench, with the old engine up on the hoist behind us](engine-swap-selfie.jpg)
 
 ### A clip from the swap
 

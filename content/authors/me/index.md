@@ -1,7 +1,7 @@
 ---
 title: Ehsan Sharafian M
 bio: PhD Candidate in Mechanical Engineering specializing in wearable IMU-based sensing, gait analysis, and haptic feedback systems for fall prevention in older adults.
-role: PhD Candidate in Mechanical Engineering
+role: PhD Candidate in Mechanical Engineering
 avatar:
   filename: avatar.jpg
 social:

@@ -15,9 +15,9 @@ affiliations:
     url: https://www.maine.edu/
 
 links:
-  - icon: at-symbol
-    url: 'mailto:ehsan.sharafian@maine.edu'
-    label: E-mail Me
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/ehsan-sharafian-m
+    label: LinkedIn
   - icon: brands/github
     url: https://github.com/ehsansharafianm
     label: GitHub
@@ -27,12 +27,12 @@ links:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en
     label: Google Scholar
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/ehsan-sharafian-m
-    label: LinkedIn
   - icon: brands/youtube
     url: https://www.youtube.com/@ehsansharafian
     label: YouTube
+  - icon: at-symbol
+    url: 'mailto:ehsan.sharafian@maine.edu'
+    label: E-mail Me
 
 interests:
   - Wearable Sensors

@@ -1,0 +1,76 @@
+<style>
+  /* Marks the top-menu item for the homepage section currently on screen. */
+  #site-header .nav-link{
+    border-radius: .5rem;
+    transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
+  }
+  #site-header .nav-link.hb-nav-current{
+    color: #0f766e !important;
+    background-color: rgba(13,148,136,.14);
+    box-shadow: inset 0 -2px 0 #0d9488;
+  }
+  .dark #site-header .nav-link.hb-nav-current{
+    color: #5eead4 !important;
+    background-color: rgba(45,212,191,.16);
+    box-shadow: inset 0 -2px 0 #2dd4bf;
+  }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Sections with no menu item of their own, and the item they belong to.
+  var aliases = {
+    'section-resume-biography-3': 'top',
+    'section-markdown': 'top',
+    'featured': 'papers',
+    'academic-exp': 'experience'
+  };
+
+  var links = {};
+  document.querySelectorAll('#site-header .nav-link').forEach(function (a) {
+    var url = new URL(a.href);
+    if (url.pathname === location.pathname) links[url.hash.slice(1) || 'top'] = a;
+  });
+
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'))
+    .filter(function (s) { return links[aliases[s.id] || s.id]; });
+  if (!sections.length) return; // not the homepage
+
+  var header = document.getElementById('site-header');
+  var current = null;
+
+  function update() {
+    var headerBottom = header.getBoundingClientRect().bottom;
+    var line = headerBottom + (window.innerHeight - headerBottom) * 0.3;
+    var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+
+    var active = sections[0];
+    sections.forEach(function (s) {
+      if (s.getBoundingClientRect().top <= line) active = s;
+    });
+    if (atBottom) active = sections[sections.length - 1];
+
+    var link = links[aliases[active.id] || active.id] || null;
+    if (link === current) return;
+    Object.keys(links).forEach(function (k) {
+      links[k].classList.remove('hb-nav-current', 'active');
+      links[k].removeAttribute('aria-current');
+    });
+    if (link) {
+      link.classList.add('hb-nav-current', 'active');
+      link.setAttribute('aria-current', 'location');
+    }
+    current = link;
+  }
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { ticking = false; update(); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', update);
+  update();
+});
+</script>

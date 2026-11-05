@@ -21,6 +21,9 @@ main:
   - name: Hobbies
     url: /#hobbies
     weight: 45
+  - name: Gallery
+    url: /#gallery
+    weight: 47
   - name: Contact
     url: /#contact
     weight: 50

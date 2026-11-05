@@ -1,0 +1,30 @@
+<style>
+  /* Light white frame around each gallery photo. */
+  #gallery .hbx-gallery-tile > button{
+    border: 3px solid rgba(255,255,255,.85);
+    box-shadow: 0 4px 16px rgba(15,23,42,.18);
+  }
+  /* Slightly larger caption text on the photo. */
+  #gallery .hbx-gallery-tile > button > span:last-child > span:first-child{
+    font-size: 1rem;
+  }
+  #gallery .hbx-gallery-tile > button > span:last-child > span + span{
+    font-size: .8125rem;
+    color: #f1f5f9;
+  }
+  /* Phones show two narrow columns, so keep the text from covering the photo. */
+  @media (max-width: 639px){
+    #gallery .hbx-gallery-tile > button > span:last-child{
+      padding: 1.5rem .5rem .5rem;
+    }
+    #gallery .hbx-gallery-tile > button > span:last-child > span:first-child{
+      font-size: .75rem;
+      line-height: 1.25;
+    }
+    #gallery .hbx-gallery-tile > button > span:last-child > span + span{
+      font-size: .6875rem;
+      line-height: 1.25;
+      margin-top: .125rem;
+    }
+  }
+</style>

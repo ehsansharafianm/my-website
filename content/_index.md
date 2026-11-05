@@ -156,6 +156,28 @@ sections:
     design:
       view: article-grid
       columns: 2
+  - block: gallery
+    id: gallery
+    content:
+      title: Gallery
+      # To add a photo: put it in assets/media/gallery/ and add an item here.
+      items:
+        - src: gallery/phd-candidacy-2025.jpg
+          title: Became a PhD Candidate
+          caption: University of Maine, November 2025
+        - src: gallery/asb-2025-poster.webp
+          title: American Society of Biomechanics (ASB) 2025
+          caption: Poster presentation, Pittsburgh
+        - src: gallery/rehabweek-2025-poster.webp
+          title: RehabWeek 2025
+          caption: Poster presentation, Chicago
+        - src: gallery/hmvc-2026-talk.webp
+          title: Human Movement Variability Conference (HMVC) 2026
+          caption: Presentation, Omaha
+    design:
+      layout: masonry
+      columns: 4
+      caption_position: overlay
   - block: markdown
     id: contact
     content:

@@ -164,25 +164,39 @@ sections:
       items:
         - src: gallery/hmvc-2026-talk.webp
           title: Human Movement Variability Conference (HMVC) 2026
-          caption: Presentation, Omaha
+          caption: |-
+            May 2026\
+            Presentation, Omaha, Nebraska
         - src: gallery/phd-candidacy-2025.jpg
           title: Became a PhD Candidate
-          caption: University of Maine, November 2025
+          caption: |-
+            November 2025\
+            University of Maine
         - src: gallery/asb-2025-poster.webp
-          title: American Society of Biomechanics (ASB) 2025
-          caption: Poster presentation, Pittsburgh
+          title: American Society of Biomechanics (ASB) 2025 Conference
+          caption: |-
+            August 2025\
+            Poster presentation, Pittsburgh, Pennsylvania
         - src: gallery/rehabweek-2025-poster.webp
-          title: RehabWeek 2025
-          caption: Poster presentation, Chicago
+          title: RehabWeek 2025 Conference
+          caption: |-
+            May 2025\
+            Poster presentation, Chicago, Illinois
         - src: gallery/ieee-embc-2024.webp
           title: IEEE EMBC 2024 Conference
-          caption: Presenting my work, Orlando, Florida
+          caption: |-
+            July 2024\
+            Presentation, Orlando, Florida
         - src: gallery/research-exhibition-2022.jpg
           title: 23rd National Research & Technology Exhibition
-          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran, December 2022
+          caption: |-
+            December 2022\
+            Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran
         - src: gallery/research-exhibition-2021.jpg
           title: 22nd National Research & Technology Exhibition
-          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran, December 2021
+          caption: |-
+            December 2021\
+            Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran
     design:
       layout: masonry
       columns: 4

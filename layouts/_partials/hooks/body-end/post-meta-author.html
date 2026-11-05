@@ -1,0 +1,16 @@
+<style>
+  /* Drop my name from post cards and post headers, keeping date and read time.
+     Publication headers list every co-author, so they keep theirs. */
+  .flex.items-center.gap-3.flex-wrap.mb-3.text-xs > .min-w-0:has(img[alt="avatar"]),
+  .flex.items-center.gap-3.flex-wrap.mb-3.text-xs > .min-w-0:has(img[alt="avatar"]) + .opacity-40{
+    display: none;
+  }
+  /* The theme hides date and read time on phones; show them there as well. */
+  .flex.items-center.gap-3.flex-wrap.mb-3.text-xs > .hidden{
+    display: inline;
+  }
+  .text-sm.flex.items-center.flex-wrap.gap-y-2:not(:has(.group.inline-flex ~ .group.inline-flex)) > .group.inline-flex,
+  .text-sm.flex.items-center.flex-wrap.gap-y-2:not(:has(.group.inline-flex ~ .group.inline-flex)) > .group.inline-flex + .mx-1{
+    display: none;
+  }
+</style>

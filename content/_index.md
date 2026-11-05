@@ -174,6 +174,12 @@ sections:
         - src: gallery/hmvc-2026-talk.webp
           title: Human Movement Variability Conference (HMVC) 2026
           caption: Presentation, Omaha
+        - src: gallery/research-exhibition-2021.jpg
+          title: 22nd National Research & Technology Exhibition
+          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, December 2021
+        - src: gallery/research-exhibition-2022.jpg
+          title: 23rd National Research & Technology Exhibition
+          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, December 2022
     design:
       layout: masonry
       columns: 4

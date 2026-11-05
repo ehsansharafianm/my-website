@@ -162,6 +162,9 @@ sections:
       title: Gallery
       # To add a photo: put it in assets/media/gallery/ and add an item here.
       items:
+        - src: gallery/hmvc-2026-talk.webp
+          title: Human Movement Variability Conference (HMVC) 2026
+          caption: Presentation, Omaha
         - src: gallery/phd-candidacy-2025.jpg
           title: Became a PhD Candidate
           caption: University of Maine, November 2025
@@ -171,15 +174,15 @@ sections:
         - src: gallery/rehabweek-2025-poster.webp
           title: RehabWeek 2025
           caption: Poster presentation, Chicago
-        - src: gallery/hmvc-2026-talk.webp
-          title: Human Movement Variability Conference (HMVC) 2026
-          caption: Presentation, Omaha
-        - src: gallery/research-exhibition-2021.jpg
-          title: 22nd National Research & Technology Exhibition
-          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran, December 2021
+        - src: gallery/ieee-embc-2024.webp
+          title: IEEE EMBC 2024 Conference
+          caption: Presenting my work, Orlando, Florida
         - src: gallery/research-exhibition-2022.jpg
           title: 23rd National Research & Technology Exhibition
           caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran, December 2022
+        - src: gallery/research-exhibition-2021.jpg
+          title: 22nd National Research & Technology Exhibition
+          caption: Representative of the New Technologies Research Center (NTRC), Amirkabir University of Technology, Tehran, Iran, December 2021
     design:
       layout: masonry
       columns: 4

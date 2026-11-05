@@ -98,8 +98,8 @@ sections:
               icon: devicon/spss
             - name: TwinCAT
               icon: custom/twincat
-            - name: Adams
-              icon: custom/adams  
+            - name: OpenSim
+              icon: custom/opensim  
             - name: Unity
               icon: devicon/unity
             - name: Blender

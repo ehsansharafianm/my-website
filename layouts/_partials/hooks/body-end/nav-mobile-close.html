@@ -1,0 +1,12 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+
+  // Close the phone menu when a link is tapped, before the page scrolls to the section.
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) toggle.checked = false;
+  });
+});
+</script>

@@ -1,14 +1,17 @@
 <style>
-  /* Light white frame around each gallery photo. */
-  #gallery .hbx-gallery-tile > button{
+  /* Light white frame around each gallery photo and certificate. */
+  #gallery .hbx-gallery-tile > button,
+  #certificates .hbx-gallery-carousel-item > button{
     border: 3px solid rgba(255,255,255,.85);
     box-shadow: 0 4px 16px rgba(15,23,42,.18);
   }
   /* Slightly larger caption text on the photo. */
-  #gallery .hbx-gallery-tile > button > span:last-child > span:first-child{
+  #gallery .hbx-gallery-tile > button > span:last-child > span:first-child,
+  #certificates .hbx-gallery-carousel-item > button > span:last-child > span:first-child{
     font-size: 1rem;
   }
-  #gallery .hbx-gallery-tile > button > span:last-child > span + span{
+  #gallery .hbx-gallery-tile > button > span:last-child > span + span,
+  #certificates .hbx-gallery-carousel-item > button > span:last-child > span + span{
     font-size: .8125rem;
     color: #f1f5f9;
   }

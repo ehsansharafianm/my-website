@@ -201,6 +201,52 @@ sections:
       layout: masonry
       columns: 4
       caption_position: overlay
+  - block: gallery
+    id: certificates
+    content:
+      title: Certificates
+      # To add a certificate: put it in assets/media/certificates/ and add an item here.
+      items:
+        - src: certificates/bhi-2025-reviewer.jpg
+          title: Certificate of Reviewer Recognition
+          caption: |-
+            October 2025\
+            IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI), Atlanta, Georgia
+        - src: certificates/rehabweek-2025-attendance.jpg
+          title: Certificate of Attendance
+          caption: |-
+            May 2025\
+            RehabWeek 2025, Chicago, Illinois
+        - src: certificates/coursera-prompt-engineering-2025.jpg
+          title: Prompt Engineering for ChatGPT
+          caption: |-
+            April 2025\
+            Vanderbilt University, Coursera
+        - src: certificates/coursera-convolutional-neural-networks-2022.jpg
+          title: Convolutional Neural Networks
+          caption: |-
+            August 2022\
+            DeepLearning.AI, Coursera
+        - src: certificates/coursera-improving-deep-neural-networks-2022.jpg
+          title: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
+          caption: |-
+            August 2022\
+            DeepLearning.AI, Coursera
+        - src: certificates/coursera-neural-networks-deep-learning-2022.jpg
+          title: Neural Networks and Deep Learning
+          caption: |-
+            July 2022\
+            DeepLearning.AI, Coursera
+        - src: certificates/coursera-intro-machine-learning-2022.jpg
+          title: Introduction to Machine Learning
+          caption: |-
+            May 2022\
+            Duke University, Coursera
+    design:
+      layout: carousel
+      columns: 3
+      aspect_ratio: landscape
+      caption_position: overlay
   - block: markdown
     id: contact
     content:

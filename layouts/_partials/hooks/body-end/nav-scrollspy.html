@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'))
-    // Certificates has no menu item, so nothing is highlighted while it is on screen.
-    .filter(function (s) { return links[aliases[s.id] || s.id] || s.id === 'certificates'; });
+    .filter(function (s) { return links[aliases[s.id] || s.id]; });
   if (!sections.length) return; // not the homepage
 
   var header = document.getElementById('site-header');

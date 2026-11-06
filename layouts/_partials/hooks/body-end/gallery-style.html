@@ -17,14 +17,20 @@
   }
   /* Phones show two narrow columns, so keep the text from covering the photo. */
   @media (max-width: 639px){
-    #gallery .hbx-gallery-tile > button > span:last-child{
+    #certificates .hbx-gallery-carousel-item{
+      flex-basis: 68%;
+    }
+    #gallery .hbx-gallery-tile > button > span:last-child,
+    #certificates .hbx-gallery-carousel-item > button > span:last-child{
       padding: 1.5rem .5rem .5rem;
     }
-    #gallery .hbx-gallery-tile > button > span:last-child > span:first-child{
+    #gallery .hbx-gallery-tile > button > span:last-child > span:first-child,
+    #certificates .hbx-gallery-carousel-item > button > span:last-child > span:first-child{
       font-size: .75rem;
       line-height: 1.25;
     }
-    #gallery .hbx-gallery-tile > button > span:last-child > span + span{
+    #gallery .hbx-gallery-tile > button > span:last-child > span + span,
+    #certificates .hbx-gallery-carousel-item > button > span:last-child > span + span{
       font-size: .6875rem;
       line-height: 1.25;
       margin-top: .125rem;

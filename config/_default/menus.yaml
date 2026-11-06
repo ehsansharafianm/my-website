@@ -24,6 +24,9 @@ main:
   - name: Gallery
     url: /#gallery
     weight: 47
+  - name: Certificates
+    url: /#certificates
+    weight: 48
   - name: Contact
     url: /#contact
     weight: 50

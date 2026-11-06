@@ -244,7 +244,7 @@ sections:
             Duke University, Coursera
     design:
       layout: carousel
-      columns: 3
+      columns: 4
       aspect_ratio: landscape
       caption_position: overlay
   - block: markdown

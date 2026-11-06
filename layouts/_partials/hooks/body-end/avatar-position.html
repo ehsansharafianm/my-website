@@ -1,0 +1,29 @@
+<style>
+  /* Profile photo framing. Change these three numbers to adjust the photo:
+     zoom: 1 = normal, bigger numbers zoom in.
+     x:    positive moves the photo right, negative moves it left.
+     y:    positive moves the photo down, negative moves it up. */
+  #section-resume-biography-3 .avatar-wrapper{
+    --avatar-zoom: 1.16;
+    --avatar-x: 7.5%;
+    --avatar-y: 10%;
+  }
+
+  /* The circle and border stay fixed; the photo moves inside them. */
+  #section-resume-biography-3 .avatar-wrapper{
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  }
+  #section-resume-biography-3 .avatar-wrapper img.avatar{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: translate(var(--avatar-x), var(--avatar-y)) scale(var(--avatar-zoom));
+  }
+</style>

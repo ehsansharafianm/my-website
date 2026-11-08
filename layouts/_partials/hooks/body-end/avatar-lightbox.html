@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Full-resolution source (falls back to the displayed avatar if missing).
   var bigSrc = '/uploads/profile.png';
+  // Framing chosen in the framing panel: zoom + position.
+  var FRAME_ZOOM = '117%';
+  var FRAME_POS = '14% 0%';
 
   var overlay = null;
   function build() {
@@ -18,10 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.className = 'hb-lb';
     overlay.innerHTML =
       '<span class="hb-lb-close" aria-label="Close">&times;</span>' +
-      '<img class="hb-lb-img" alt="Profile photo">';
-    var big = overlay.querySelector('.hb-lb-img');
-    big.onerror = function () { big.src = avatar.currentSrc || avatar.src; };
-    big.src = bigSrc;
+      '<div class="hb-lb-frame"><div class="hb-lb-photo"></div></div>';
+    var photo = overlay.querySelector('.hb-lb-photo');
+    photo.style.backgroundSize = FRAME_ZOOM;
+    photo.style.backgroundPosition = FRAME_POS;
+    // Use the full-res copy, falling back to the displayed avatar if it is missing.
+    var test = new Image();
+    test.onload = function () { photo.style.backgroundImage = 'url("' + bigSrc + '")'; };
+    test.onerror = function () { photo.style.backgroundImage = 'url("' + (avatar.currentSrc || avatar.src) + '")'; };
+    test.src = bigSrc;
     overlay.addEventListener('click', close);
     document.body.appendChild(overlay);
   }
@@ -45,10 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'padding:6vh 6vw;background:rgba(2,6,23,.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);' +
       'opacity:0;visibility:hidden;transition:opacity .28s ease;cursor:zoom-out;}' +
     '.hb-lb.hb-lb-on{opacity:1;visibility:visible;}' +
-    '.hb-lb-img{width:min(80vw,80vh,420px);aspect-ratio:1/1;object-fit:cover;border-radius:50%;' +
+    '.hb-lb-frame{width:min(80vw,80vh,420px);aspect-ratio:1/1;border-radius:50%;overflow:hidden;' +
       'border:4px solid rgba(255,255,255,.92);box-shadow:0 24px 70px rgba(0,0,0,.55);' +
       'transform:scale(.9);transition:transform .28s cubic-bezier(.2,.8,.2,1);}' +
-    '.hb-lb.hb-lb-on .hb-lb-img{transform:scale(1);}' +
+    '.hb-lb.hb-lb-on .hb-lb-frame{transform:scale(1);}' +
+    '.hb-lb-photo{width:100%;height:100%;background-repeat:no-repeat;}' +
     '.hb-lb-close{position:fixed;top:1rem;right:1.4rem;color:#fff;font-size:2.6rem;line-height:1;' +
       'cursor:pointer;opacity:.8;transition:opacity .2s ease,transform .2s ease;user-select:none;}' +
     '.hb-lb-close:hover{opacity:1;transform:scale(1.1);}';

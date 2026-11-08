@@ -1,0 +1,57 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sec = document.getElementById('section-resume-biography-3');
+  if (!sec) return;
+  // The profile photo is the first image in the biography hero.
+  var avatar = sec.querySelector('img');
+  if (!avatar) return;
+
+  avatar.style.cursor = 'zoom-in';
+  avatar.setAttribute('title', 'Click to enlarge');
+
+  // Full-resolution source (falls back to the displayed avatar if missing).
+  var bigSrc = '/uploads/profile.png';
+
+  var overlay = null;
+  function build() {
+    overlay = document.createElement('div');
+    overlay.className = 'hb-lb';
+    overlay.innerHTML =
+      '<span class="hb-lb-close" aria-label="Close">&times;</span>' +
+      '<img class="hb-lb-img" alt="Profile photo">';
+    var big = overlay.querySelector('.hb-lb-img');
+    big.onerror = function () { big.src = avatar.currentSrc || avatar.src; };
+    big.src = bigSrc;
+    overlay.addEventListener('click', close);
+    document.body.appendChild(overlay);
+  }
+  function open() {
+    if (!overlay) build();
+    requestAnimationFrame(function () { overlay.classList.add('hb-lb-on'); });
+    document.documentElement.style.overflow = 'hidden';
+  }
+  function close() {
+    if (!overlay) return;
+    overlay.classList.remove('hb-lb-on');
+    document.documentElement.style.overflow = '';
+  }
+
+  avatar.addEventListener('click', function (e) { e.preventDefault(); open(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+  var css = document.createElement('style');
+  css.textContent =
+    '.hb-lb{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;' +
+      'padding:6vh 6vw;background:rgba(2,6,23,.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);' +
+      'opacity:0;visibility:hidden;transition:opacity .28s ease;cursor:zoom-out;}' +
+    '.hb-lb.hb-lb-on{opacity:1;visibility:visible;}' +
+    '.hb-lb-img{max-width:min(90vw,460px);max-height:90vh;width:auto;height:auto;border-radius:1.25rem;' +
+      'box-shadow:0 24px 70px rgba(0,0,0,.55);transform:scale(.9);transition:transform .28s cubic-bezier(.2,.8,.2,1);' +
+      'object-fit:contain;border:3px solid rgba(255,255,255,.12);}' +
+    '.hb-lb.hb-lb-on .hb-lb-img{transform:scale(1);}' +
+    '.hb-lb-close{position:fixed;top:1rem;right:1.4rem;color:#fff;font-size:2.6rem;line-height:1;' +
+      'cursor:pointer;opacity:.8;transition:opacity .2s ease,transform .2s ease;user-select:none;}' +
+    '.hb-lb-close:hover{opacity:1;transform:scale(1.1);}';
+  document.head.appendChild(css);
+});
+</script>

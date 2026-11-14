@@ -1,6 +1,8 @@
 <script>
-// Horizontal scroll rows for Talks, Projects, and Hobbies, with carousel dots
-// (click to jump) and a visible teal scrollbar. Cards keep their styling/links.
+// Full-width horizontal scroll rows (Featured, Talks, Projects, Hobbies) with
+// carousel dots, a visible scrollbar, bigger cards, and centered section titles.
+// The row breaks out to the full viewport width while cards stay aligned under
+// the heading. Cards keep their real styling and links.
 document.addEventListener('DOMContentLoaded', function () {
   var SECTIONS = ['featured', 'talks', 'projects', 'hobbies'];
 
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function step(grid) {
     var k = grid.children;
     if (k.length > 1) return k[1].offsetLeft - k[0].offsetLeft;
-    return (k[0] ? k[0].offsetWidth : 300) + 24;
+    return (k[0] ? k[0].offsetWidth : 360) + 24;
   }
 
   var rows = [];
@@ -16,6 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
   SECTIONS.forEach(function (id) {
     var sec = document.getElementById(id);
     if (!sec) return;
+
+    // Center the section heading.
+    var h = sec.querySelector('h1, h2');
+    if (h) {
+      h.style.textAlign = 'center';
+      var hp = h.parentElement;
+      if (hp && getComputedStyle(hp).display.indexOf('flex') !== -1) {
+        hp.style.justifyContent = 'center';
+        hp.style.textAlign = 'center';
+      }
+    }
+
+    // Find the card grid.
     var grids = [];
     sec.querySelectorAll('*').forEach(function (el) {
       if (getComputedStyle(el).display === 'grid') grids.push(el);
@@ -31,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     grid.classList.add('hb-hscroll');
     Array.prototype.forEach.call(grid.children, function (c) { c.classList.add('hb-hscroll-item'); });
 
-    // Dots
+    // Dots (stay within the content column, centered).
     var dots = document.createElement('div');
     dots.className = 'hb-dots';
     Array.prototype.forEach.call(grid.children, function (card, i) {
@@ -51,8 +66,21 @@ document.addEventListener('DOMContentLoaded', function () {
     var up = function () { update(entry); };
     grid.addEventListener('scroll', up);
     entry.up = up;
-    update(entry);
   });
+
+  // Break a row out to the full viewport width, keeping cards aligned with content.
+  function bleed(grid) {
+    grid.style.marginLeft = grid.style.marginRight = '';
+    grid.style.paddingLeft = grid.style.paddingRight = '';
+    var r = grid.getBoundingClientRect();
+    var vw = document.documentElement.clientWidth;
+    var L = Math.max(0, r.left), R = Math.max(0, vw - r.right);
+    grid.style.marginLeft = (-L) + 'px';
+    grid.style.marginRight = (-R) + 'px';
+    grid.style.paddingLeft = L + 'px';
+    grid.style.paddingRight = R + 'px';
+    grid.style.scrollPaddingLeft = L + 'px';
+  }
 
   function update(e) {
     var grid = e.grid, dots = e.dots;
@@ -61,12 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!overflow) return;
     var idx = Math.round(grid.scrollLeft / step(grid));
     idx = Math.max(0, Math.min(dots.children.length - 1, idx));
-    Array.prototype.forEach.call(dots.children, function (b, i) {
-      b.classList.toggle('active', i === idx);
-    });
+    Array.prototype.forEach.call(dots.children, function (b, i) { b.classList.toggle('active', i === idx); });
   }
 
-  window.addEventListener('resize', function () { rows.forEach(function (e) { e.up(); }); });
+  function layout() {
+    rows.forEach(function (e) { bleed(e.grid); });
+    rows.forEach(function (e) { e.up(); });
+  }
 
   var css = document.createElement('style');
   css.textContent =
@@ -74,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'grid-template-columns:none !important;gap:1.5rem;overflow-x:auto;' +
       'scroll-snap-type:x mandatory;padding-bottom:.5rem;scrollbar-width:thin;' +
       'scrollbar-color:rgba(13,148,136,.55) transparent;-webkit-overflow-scrolling:touch;}' +
-    '.hb-hscroll > .hb-hscroll-item{flex:0 0 auto;width:min(84vw,350px);scroll-snap-align:start;}' +
+    '.hb-hscroll > .hb-hscroll-item{flex:0 0 auto;width:min(86vw,400px);scroll-snap-align:start;}' +
     '.hb-hscroll::-webkit-scrollbar{height:8px;}' +
     '.hb-hscroll::-webkit-scrollbar-thumb{background:rgba(13,148,136,.5);border-radius:4px;}' +
     '.hb-hscroll::-webkit-scrollbar-track{background:transparent;}' +
@@ -85,5 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     '.hb-dots button.active{background:#0d9488;width:24px;border-radius:5px;}' +
     '@media (prefers-color-scheme:dark){.hb-dots button.active{background:#2dd4bf;}}';
   document.head.appendChild(css);
+
+  // Apply once layout has settled, and on resize.
+  requestAnimationFrame(function () { requestAnimationFrame(layout); });
+  window.addEventListener('load', layout);
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(layout, 120); });
 });
 </script>

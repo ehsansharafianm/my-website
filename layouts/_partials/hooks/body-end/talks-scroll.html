@@ -1,0 +1,39 @@
+<script>
+// Turn the "Recent Talks" collection grid into a horizontal scroll row,
+// to match the Certificates carousel. Keeps the real talk cards and their links.
+document.addEventListener('DOMContentLoaded', function () {
+  var sec = document.getElementById('talks');
+  if (!sec) return;
+
+  function depth(el) { var d = 0; while (el) { d++; el = el.parentElement; } return d; }
+
+  // The card grid is the display:grid element holding the talk cards:
+  // most direct children, and innermost on a tie.
+  var grids = [];
+  sec.querySelectorAll('*').forEach(function (el) {
+    if (getComputedStyle(el).display === 'grid') grids.push(el);
+  });
+  if (!grids.length) return;
+  grids.sort(function (a, b) {
+    if (b.children.length !== a.children.length) return b.children.length - a.children.length;
+    return depth(b) - depth(a);
+  });
+  var grid = grids[0];
+  if (!grid || grid.children.length < 1) return;
+
+  grid.classList.add('hb-talks-scroll');
+  Array.prototype.forEach.call(grid.children, function (c) { c.classList.add('hb-talks-item'); });
+
+  var css = document.createElement('style');
+  css.textContent =
+    '.hb-talks-scroll{display:flex !important;flex-wrap:nowrap !important;' +
+      'grid-template-columns:none !important;gap:1.5rem;overflow-x:auto;' +
+      'scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:thin;' +
+      'scrollbar-color:rgba(13,148,136,.5) transparent;-webkit-overflow-scrolling:touch;}' +
+    '.hb-talks-scroll > .hb-talks-item{flex:0 0 auto;width:min(84vw,350px);scroll-snap-align:start;}' +
+    '.hb-talks-scroll::-webkit-scrollbar{height:8px;}' +
+    '.hb-talks-scroll::-webkit-scrollbar-thumb{background:rgba(13,148,136,.45);border-radius:4px;}' +
+    '.hb-talks-scroll::-webkit-scrollbar-track{background:transparent;}';
+  document.head.appendChild(css);
+});
+</script>

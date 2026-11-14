@@ -2,7 +2,7 @@
 // Horizontal scroll rows for Talks, Projects, and Hobbies, with carousel dots
 // (click to jump) and a visible teal scrollbar. Cards keep their styling/links.
 document.addEventListener('DOMContentLoaded', function () {
-  var SECTIONS = ['talks', 'projects', 'hobbies'];
+  var SECTIONS = ['featured', 'talks', 'projects', 'hobbies'];
 
   function depth(el) { var d = 0; while (el) { d++; el = el.parentElement; } return d; }
   function step(grid) {

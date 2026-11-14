@@ -1,16 +1,21 @@
 <script>
-// Turn the Talks, Projects, and Hobbies collection grids into horizontal scroll
-// rows (like the Certificates carousel). Cards keep their real styling and links.
+// Horizontal scroll rows for Talks, Projects, and Hobbies, with carousel dots
+// (click to jump) and a visible teal scrollbar. Cards keep their styling/links.
 document.addEventListener('DOMContentLoaded', function () {
   var SECTIONS = ['talks', 'projects', 'hobbies'];
 
   function depth(el) { var d = 0; while (el) { d++; el = el.parentElement; } return d; }
+  function step(grid) {
+    var k = grid.children;
+    if (k.length > 1) return k[1].offsetLeft - k[0].offsetLeft;
+    return (k[0] ? k[0].offsetWidth : 300) + 24;
+  }
+
+  var rows = [];
 
   SECTIONS.forEach(function (id) {
     var sec = document.getElementById(id);
     if (!sec) return;
-    // The card grid is the display:grid element holding the cards:
-    // most direct children, innermost on a tie.
     var grids = [];
     sec.querySelectorAll('*').forEach(function (el) {
       if (getComputedStyle(el).display === 'grid') grids.push(el);
@@ -22,20 +27,63 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     var grid = grids[0];
     if (!grid || grid.children.length < 1) return;
+
     grid.classList.add('hb-hscroll');
     Array.prototype.forEach.call(grid.children, function (c) { c.classList.add('hb-hscroll-item'); });
+
+    // Dots
+    var dots = document.createElement('div');
+    dots.className = 'hb-dots';
+    Array.prototype.forEach.call(grid.children, function (card, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Go to item ' + (i + 1));
+      b.addEventListener('click', function () {
+        var base = grid.firstElementChild.offsetLeft;
+        grid.scrollTo({ left: card.offsetLeft - base, behavior: 'smooth' });
+      });
+      dots.appendChild(b);
+    });
+    grid.insertAdjacentElement('afterend', dots);
+
+    var entry = { grid: grid, dots: dots };
+    rows.push(entry);
+    var up = function () { update(entry); };
+    grid.addEventListener('scroll', up);
+    entry.up = up;
+    update(entry);
   });
+
+  function update(e) {
+    var grid = e.grid, dots = e.dots;
+    var overflow = grid.scrollWidth - grid.clientWidth > 4;
+    dots.style.display = (overflow && grid.children.length > 1) ? 'flex' : 'none';
+    if (!overflow) return;
+    var idx = Math.round(grid.scrollLeft / step(grid));
+    idx = Math.max(0, Math.min(dots.children.length - 1, idx));
+    Array.prototype.forEach.call(dots.children, function (b, i) {
+      b.classList.toggle('active', i === idx);
+    });
+  }
+
+  window.addEventListener('resize', function () { rows.forEach(function (e) { e.up(); }); });
 
   var css = document.createElement('style');
   css.textContent =
     '.hb-hscroll{display:flex !important;flex-wrap:nowrap !important;' +
       'grid-template-columns:none !important;gap:1.5rem;overflow-x:auto;' +
-      'scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:thin;' +
-      'scrollbar-color:rgba(13,148,136,.5) transparent;-webkit-overflow-scrolling:touch;}' +
+      'scroll-snap-type:x mandatory;padding-bottom:.5rem;scrollbar-width:thin;' +
+      'scrollbar-color:rgba(13,148,136,.55) transparent;-webkit-overflow-scrolling:touch;}' +
     '.hb-hscroll > .hb-hscroll-item{flex:0 0 auto;width:min(84vw,350px);scroll-snap-align:start;}' +
     '.hb-hscroll::-webkit-scrollbar{height:8px;}' +
-    '.hb-hscroll::-webkit-scrollbar-thumb{background:rgba(13,148,136,.45);border-radius:4px;}' +
-    '.hb-hscroll::-webkit-scrollbar-track{background:transparent;}';
+    '.hb-hscroll::-webkit-scrollbar-thumb{background:rgba(13,148,136,.5);border-radius:4px;}' +
+    '.hb-hscroll::-webkit-scrollbar-track{background:transparent;}' +
+    '.hb-dots{display:flex;justify-content:center;gap:8px;margin-top:1rem;}' +
+    '.hb-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;cursor:pointer;' +
+      'background:rgba(100,116,139,.4);transition:all .2s ease;}' +
+    '.hb-dots button:hover{background:rgba(13,148,136,.6);}' +
+    '.hb-dots button.active{background:#0d9488;width:24px;border-radius:5px;}' +
+    '@media (prefers-color-scheme:dark){.hb-dots button.active{background:#2dd4bf;}}';
   document.head.appendChild(css);
 });
 </script>

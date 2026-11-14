@@ -1,0 +1,41 @@
+<script>
+// Turn the Talks, Projects, and Hobbies collection grids into horizontal scroll
+// rows (like the Certificates carousel). Cards keep their real styling and links.
+document.addEventListener('DOMContentLoaded', function () {
+  var SECTIONS = ['talks', 'projects', 'hobbies'];
+
+  function depth(el) { var d = 0; while (el) { d++; el = el.parentElement; } return d; }
+
+  SECTIONS.forEach(function (id) {
+    var sec = document.getElementById(id);
+    if (!sec) return;
+    // The card grid is the display:grid element holding the cards:
+    // most direct children, innermost on a tie.
+    var grids = [];
+    sec.querySelectorAll('*').forEach(function (el) {
+      if (getComputedStyle(el).display === 'grid') grids.push(el);
+    });
+    if (!grids.length) return;
+    grids.sort(function (a, b) {
+      if (b.children.length !== a.children.length) return b.children.length - a.children.length;
+      return depth(b) - depth(a);
+    });
+    var grid = grids[0];
+    if (!grid || grid.children.length < 1) return;
+    grid.classList.add('hb-hscroll');
+    Array.prototype.forEach.call(grid.children, function (c) { c.classList.add('hb-hscroll-item'); });
+  });
+
+  var css = document.createElement('style');
+  css.textContent =
+    '.hb-hscroll{display:flex !important;flex-wrap:nowrap !important;' +
+      'grid-template-columns:none !important;gap:1.5rem;overflow-x:auto;' +
+      'scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:thin;' +
+      'scrollbar-color:rgba(13,148,136,.5) transparent;-webkit-overflow-scrolling:touch;}' +
+    '.hb-hscroll > .hb-hscroll-item{flex:0 0 auto;width:min(84vw,350px);scroll-snap-align:start;}' +
+    '.hb-hscroll::-webkit-scrollbar{height:8px;}' +
+    '.hb-hscroll::-webkit-scrollbar-thumb{background:rgba(13,148,136,.45);border-radius:4px;}' +
+    '.hb-hscroll::-webkit-scrollbar-track{background:transparent;}';
+  document.head.appendChild(css);
+});
+</script>
